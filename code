@@ -1,0 +1,17 @@
+int main()
+{
+	int random = 0;
+	bool runningInTheBackground = true;
+	while (runningInTheBackground == true) {
+		random += 1;
+		if (random >= 20)
+		{
+			random = 0;
+		}
+		if (GetKeyState('A'))
+		{
+			runningInTheBackground = false;
+			cout << random;
+		}
+	}
+}
